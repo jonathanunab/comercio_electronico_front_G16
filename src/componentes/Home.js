@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import crud from '../conexiones/crud';
 
 const Home = () => {
-  
-  const [categorias, setCategorias] = useState([]);
 
-  const cargarCategorias = async ()=>{
+    const [categorias, setCategorias] = useState([]);
+
+    const cargarCategorias = async ()=>{
     
     const response = await crud.GET(`/api/categoria/home`)
     setCategorias(response.categoria)
@@ -21,23 +21,26 @@ const Home = () => {
   const cargarProductos = async ()=>{
     
     const response = await crud.GET(`/api/producto/home`)
-    setProductos(response.producto1)
+    setProductos(response.producto)
   }
-console.log(productos);
+    console.log(productos);
   useEffect(() =>{
     cargarProductos();
   },[]);
+  
 
 
-  return (
-      <main className='flex-1'>
-         <div className='md:w-2/3 lg:w-2/5 p-10' >
-            <h1 className="inline bg-gradient-to-r from-indigo-200 via-violet-700 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
-              Proyecto G13
+    return (
+
+        <main className='flex-1'>
+         <div className='bg-sky-800 p-10' >
+            <h1 className="bg-sky-800 text-white bg-clip-text font-display text-5xl tracking-tight text-transparent">
+              Proyecto Grupo 16 (G13)
             </h1>
             <Link 
             to={"/login"}
-            className="block text-center my-5 text-violet-600 uppercase text-sm"
+            className="block text-center my-5 bg-blue-200"
+            style={{width: "170px"}}
             >Inicio de Sesión</Link>
 
          </div>
@@ -45,9 +48,9 @@ console.log(productos);
          <div className="bg-white">
       <div className="py-16 sm:py-24 xl:mx-auto xl:max-w-7xl xl:px-8">
         <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900">Shop by Category</h2>
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900">Compre por Categoría</h2>
           <a href="#" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
-            Browse all categories
+            Ver todas las categorías
             <span aria-hidden="true"> &rarr;</span>
           </a>
         </div>
@@ -79,7 +82,7 @@ console.log(productos);
 
         <div className="mt-6 px-4 sm:hidden">
           <a href="#" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
-            Browse all categories
+            Ver los productos
             <span aria-hidden="true"> &rarr;</span>
           </a>
         </div>
@@ -87,9 +90,9 @@ console.log(productos);
     </div>
 
 
-    <div className="bg-gray-500">
+    <div className="bg-sky-700">
       <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-xl font-bold text-gray-900">Customers also bought</h2>
+        <h2 className="text-xl font-bold text-gray-900">Lista de productos</h2>
 
         <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
           {productos.map((product) => (
@@ -119,7 +122,7 @@ console.log(productos);
                   href={product.href}
                   className="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 py-2 px-8 text-sm font-medium text-gray-900 hover:bg-gray-200"
                 >
-                  Add to bag<span className="sr-only">, {product.nombre}</span>
+                  Agregar<span className="sr-only">, {product.nombre}</span>
                 </a>
               </div>
             </div>
