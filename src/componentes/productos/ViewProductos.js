@@ -74,9 +74,7 @@ export const ViewProductos = ({ producto }) => {
           Eliminar
         </button>
       </div>
-
     </div>
-  </div>
 );
 };
 
