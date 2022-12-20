@@ -59,7 +59,7 @@ const Admin = () => {
       <div className=" bg-sky-200 md:flex md:min-h-screen">
         <Sidebar />
         <main className="flex-1">
-          <h1 className="bg-sky-200 text-black bg-clip-text font-display text-5xl tracking-tight text-transparent">
+          <h1 className="bg-sky-900 text-black bg-clip-text font-display text-5xl tracking-tight text-transparent">
             Listado de categorias
           </h1>
           <br/>

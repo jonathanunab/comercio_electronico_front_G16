@@ -37,9 +37,6 @@ export const ViewProductos = ({ producto }) => {
                 }
               })
           }
-          console.log(producto.categoriaId)
-          window.location.reload();
-          //navigate(`/home-productos/${producto.categoriaId}`);
         } else {
           swal("se cancelo la acción");
         }
