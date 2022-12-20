@@ -43,10 +43,11 @@ class crud {
             }
         }
         const url = `${back.api.baseURL}${resource}`
+        
         let response = (await (await fetch(url, data)).json())
         return response
-        
     }
+
     async PUT(resource, body){
         const token = localStorage.getItem("token");
         let bearer;
@@ -66,6 +67,7 @@ class crud {
             }
         }
         const url = `${back.api.baseURL}${resource}`
+        //console.log(url)
         let response = (await (await fetch(url, data)).json())
         return response
         

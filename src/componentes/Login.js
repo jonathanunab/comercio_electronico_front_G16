@@ -29,7 +29,7 @@ const Login = () => {
    
     const response = await crud.POST(`/api/auth`, data);
       const mensaje = response.msg;
-      console.log(mensaje);
+      //console.log(mensaje);
       if(mensaje === 'el usuario no existe'){
         const mensaje = "el usuario no existe";
         swal({
@@ -65,7 +65,6 @@ const Login = () => {
       }else{
         
         const jwt = response.token;
-
         localStorage.setItem('token', jwt);
         
         
@@ -84,8 +83,8 @@ const Login = () => {
   return (
       <main className='container mx-auto mt-5 md:mt-20 p-5 md:flex md:justify-center'>
          <div className='md:w-2/3 lg:w-2/5'>
-            <h1 className="inline bg-gradient-to-r from-indigo-200 via-violet-700 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
-              G13 Iniciar sesión Ecommerce 2
+            <h1 className="inline bg-gradient-to-r from-orange-200 via-violet-700 to-orange-200 bg-clip-text font-display text-5xl tracking-tight text-transparent ">
+              Inicio de sesión
             </h1>
 
             <form 

@@ -1,7 +1,7 @@
 import React, { useState }  from 'react';
-import Header from './Header';
-import Sidebar from './Sidebar'; 
-import crud from '../conexiones/crud';
+import Header from '../Header';
+import Sidebar from '../Sidebar'; 
+import crud from '../../conexiones/crud';
 import { Link, useNavigate } from 'react-router-dom';
 
 const CrearCategoria = () => {
@@ -29,9 +29,7 @@ const CrearCategoria = () => {
        
           const response = await crud.POST(`/api/categoria`, data);
           const mensaje = response.msg;
-          console.log(mensaje);
           navigate("/admin");
-         
       }
     
       const onSubmit = (e) => {

@@ -27,7 +27,7 @@ const CrearCuenta = () => {
   const crearCuenta = async () =>{
     //los dos password deben ser iguales
     if(password !== confirmar){
-      console.log("son diferentes");
+      //console.log("son diferentes");
       const mensaje = "Las contraseñas son diferentes.";
       swal({
         title: 'Error',
@@ -49,7 +49,7 @@ const CrearCuenta = () => {
         email: usuario.email,
         password: usuario.password
       }
-      console.log(data);
+      //console.log(data);
       const response = await crud.POST(`/api/usuarios`, data);
       const mensaje = response.msg;
       if(mensaje === ' el usuario ya existe'){

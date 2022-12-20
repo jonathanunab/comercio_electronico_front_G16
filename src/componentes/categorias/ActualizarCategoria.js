@@ -1,7 +1,7 @@
 import React, { useEffect, useState }  from 'react';
-import Header from './Header';
-import Sidebar from './Sidebar'; 
-import crud from '../conexiones/crud';
+import Header from '../Header';
+import Sidebar from '../Sidebar'; 
+import crud from '../../conexiones/crud';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import swal from 'sweetalert'; 
 
@@ -10,7 +10,7 @@ const ActualizarCategoria = () => {
   const navigate = useNavigate(); 
 
   const {idCategoria} = useParams();
-    console.log(idCategoria);
+    //console.log(idCategoria);
     
     const [categoria, setCategoria] = useState({
         nombre:'',
@@ -42,7 +42,7 @@ const ActualizarCategoria = () => {
         }
        //console.log(data, idCategoria);
           const response = await crud.PUT(`/api/categoria/${idCategoria}`, data);
-          console.log(response);
+          //console.log(response);
           const mensaje1 = "la categoria se actualizo correctamente";
           swal({
             title:'Información',

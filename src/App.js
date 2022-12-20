@@ -4,10 +4,12 @@ import Login from './componentes/Login';
 import CrearCuenta from './componentes/CrearCuenta';
 import Admin from './componentes/Admin';
 import Home from './componentes/Home';
-import CrearCategoria from './componentes/CrearCategoria';
-import ActualizarCategoria from './componentes/ActualizarCategoria';
+import CrearCategoria from './componentes/categorias/CrearCategoria';
+import ActualizarCategoria from './componentes/categorias/ActualizarCategoria';
 import HomeProductos from './componentes/productos/HomeProductos';
 import CrearProducto from './componentes/productos/CrearProducto';
+import ActualizarProducto from './componentes/productos/ActualizarProductos'
+
 function App() {
   return (
     <Router>
@@ -20,6 +22,7 @@ function App() {
           <Route path="/actualizar-categoria/:idCategoria" exact element={<ActualizarCategoria/>} />
           <Route path="/home-productos/:idCategoria" exact element={<HomeProductos/>} />
           <Route path="/crear-producto/:idCategoria" exact element={<CrearProducto/>} />
+          <Route path="/actualizar-producto/:idProducto" exact element={<ActualizarProducto />} />
       </Routes>
     </Router>
   );
