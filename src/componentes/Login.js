@@ -31,7 +31,7 @@ const Login = () => {
       const mensaje = response.msg;
       //console.log(mensaje);
       if(mensaje === 'el usuario no existe'){
-        const mensaje = "el usuario no existe";
+        const mensaje = "El usuario no existe";
         swal({
           title: 'Error',
           text: mensaje,
@@ -47,7 +47,7 @@ const Login = () => {
           }
         })
       }else if(mensaje === 'password incorrecto'){
-        const mensaje = "password incorrecto";
+        const mensaje = "La contraseña ingresada es incorrecta.";
         swal({
           title: 'Error',
           text: mensaje,
@@ -82,9 +82,9 @@ const Login = () => {
   
   return (
       <main className='container mx-auto mt-5 md:mt-20 p-5 md:flex md:justify-center'>
-         <div className='md:w-2/3 lg:w-2/5'>
-            <h1 className="inline bg-gradient-to-r from-orange-200 via-violet-700 to-orange-200 bg-clip-text font-display text-5xl tracking-tight text-transparent ">
-              Inicio de sesión
+         <div>
+            <h1 className="bg-sky-800 text-white bg-clip-text font-display text-5xl tracking-tight text-transparent ">
+              Inicio de sesión E-commerce
             </h1>
 
             <form 
@@ -118,11 +118,11 @@ const Login = () => {
               <input 
                 type="submit"
                 value="Iniciar Sesión"
-                className="bg-violet-600 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-violet-400 transition-colors"
+                className="bg-blue-200 mb-5 w-full py-3 text-black uppercase font-bold rounded hover:cursor-pointer hover:bg-violet-400 transition-colors"
             />
             <Link 
             to={"/crear-cuenta"}
-            className="block text-center my-5 text-violet-600 uppercase text-sm"
+            className="block text-center my-5 text-gray-500 uppercase text-sm"
             >Crear Cuenta</Link>
 
             </form>

@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 const Sidebar = () => {
 
   return (
-    <aside className='md:w-60 lg:w-90 px-5 py-10 bg-slate-500'>
-        <p className='text-xl font-bold'>Adminstrador</p>
+    <aside className='md:w-60 lg:w-90 px-5 py-10 bg-sky-800'>
+        <p className='text-white text-xl font-bold'>Adminstrador</p>
         <Link 
             to={"/crear-categorias"}
-            className="bg-violet-600 w-full p-3 text-white uppercase font-bold block mt-5 text-center rounded-lg"
-            >Crear Categorias</Link>
+            className="bg-blue-200 w-full p-3 text-black uppercase font-bold block mt-5 text-center rounded-lg"
+            >Crear Categorías</Link>
 
       <div className='py-10'>
       <Link 
             to={"/admin"}
-            className="bg-violet-600 w-full p-3 text-white uppercase font-bold block mt-5 text-center rounded-lg"
-            >Admin Categorias</Link>
+            className="bg-blue-200 w-full p-3 text-black uppercase font-bold block mt-5 text-center rounded-lg"
+            >Admin Categorías</Link>
       </div>
     </aside>
     );
