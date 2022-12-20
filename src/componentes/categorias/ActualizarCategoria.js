@@ -43,7 +43,7 @@ const ActualizarCategoria = () => {
        //console.log(data, idCategoria);
           const response = await crud.PUT(`/api/categoria/${idCategoria}`, data);
           //console.log(response);
-          const mensaje1 = "la categoria se actualizo correctamente";
+          const mensaje1 = "La categoría se actualizo correctamente";
           swal({
             title:'Información',
             text: mensaje1,
@@ -76,7 +76,7 @@ const ActualizarCategoria = () => {
         <Sidebar/>
         <main className='flex-1'>
         <div className='mt-10 flex justify-center'>
-        <h1 className="inline bg-gradient-to-r from-indigo-200 via-violet-700 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+        <h1 className="inline bg-gradient-to-r from-sky-200 via-violet-700 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
               Actualizar Categoria
             </h1>
         </div>

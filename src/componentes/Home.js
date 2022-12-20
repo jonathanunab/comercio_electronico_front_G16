@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <main className="flex-1">
       <div className="md:w-2/3 lg:w-2/5 p-10">
-        <h1 className="inline bg-gradient-to-r from-orange-500 via-violet-700 to-orange-700 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+        <h1 className="inline bg-gradient-to-r from-sky-200 via-violet-700 to-blue-800 bg-clip-text font-display text-5xl tracking-tight text-transparent">
           Comercio electrónico comestibles Grupo 16
         </h1>
         <Link
