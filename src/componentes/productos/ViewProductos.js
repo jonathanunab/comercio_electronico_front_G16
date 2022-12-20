@@ -4,29 +4,44 @@ import crud from "../../conexiones/crud";
 import swal from "sweetalert";
 
 export const ViewProductos = ({ producto }) => {
-    
+   
     const borrarProducto = async (producto) => {
     
         swal({
-        title: "¿Está seguro de eliminar el producto?",
-        text: "Al eliminarlo no se podrá recuperar",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
+          title: "Estas seguro de eliminar el producto?",
+          text: "una vez eliminado, no se podra recuperar este producto",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
         }).then((willDelete) => {
-        if (willDelete) {
+          if (willDelete) {
             const response = crud.DELETE(`/api/producto/${producto._id}`);
 
             if (response) {
-            swal("El producto ha sido borrado correctamente", {
+              swal({
+                title: "Información",
+                text: "Producto borrado correctamente",
                 icon: "success",
-            });
-            }
-            console.log(producto.categoriaId)
-            window.location.reload();
-            //navigate(`/home-productos/${producto.categoriaId}`);
+                buttons: {
+                  confirm: {
+                    text: "OK",
+                    value: true,
+                    visible: true,
+                    className: "btn btn-primary",
+                    closeModal: true,
+                  },
+                },
+              }).then((value) => {
+                if (value) {
+                  window.location.reload();
+                }
+              })
+          }
+          console.log(producto.categoriaId)
+          window.location.reload();
+          //navigate(`/home-productos/${producto.categoriaId}`);
         } else {
-            swal("Acción cancelada");
+          swal("se cancelo la acción");
         }
         });
     };
@@ -59,8 +74,10 @@ export const ViewProductos = ({ producto }) => {
           Eliminar
         </button>
       </div>
+
     </div>
-  );
+  </div>
+);
 };
 
 export default ViewProductos;
