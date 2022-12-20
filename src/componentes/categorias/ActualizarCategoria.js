@@ -43,7 +43,7 @@ const ActualizarCategoria = () => {
        //console.log(data, idCategoria);
           const response = await crud.PUT(`/api/categoria/${idCategoria}`, data);
           //console.log(response);
-          const mensaje1 = "La categoría se actualizo correctamente";
+          const mensaje1 = "La categoría se actualizó correctamente";
           swal({
             title:'Información',
             text: mensaje1,
@@ -76,18 +76,18 @@ const ActualizarCategoria = () => {
         <Sidebar/>
         <main className='flex-1'>
         <div className='mt-10 flex justify-center'>
-        <h1 className="inline bg-gradient-to-r from-sky-200 via-violet-700 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
-              Actualizar Categoria
+        <h1 className="bg-sky-800 text-white bg-clip-text font-display text-5xl tracking-tight text-transparent">
+              Actualizar Categoría
             </h1>
         </div>
         
         <div className='mt-10 flex justify-center' >
         <form 
-              className='my-10 bg-white shadow rounded-lg p-10 '
+              className='my-10 bg-white shadow-orange-500 rounded-lg p-10 '
               onSubmit={onSubmit}
             >
               <div className='my-5'>
-                <label className='uppercase text-gray-600 block text-xl font-bold' >Nombre de la categoria</label>
+                <label className='uppercase text-gray-600 block text-xl font-bold' >Nombre categoría</label>
                 <input
                   type="text"
                   id="nombre"
@@ -98,7 +98,7 @@ const ActualizarCategoria = () => {
                   onChange={onChange}
                 />
 
-              <label className='uppercase text-gray-600 block text-xl font-bold' >Imagen de la categoria</label>
+              <label className='uppercase text-gray-600 block text-xl font-bold' >Imagen</label>
                 <input
                   type="text"
                   id="imagen"
@@ -113,7 +113,7 @@ const ActualizarCategoria = () => {
               <input 
                 type="submit"
                 value="Actualizar Categoria"
-                className="bg-violet-600 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-violet-400 transition-colors"
+                className="bg-blue-200 mb-5 w-full py-3 text-black uppercase font-bold rounded hover:cursor-pointer hover:bg-violet-400 transition-colors"
             />
 
             </form>

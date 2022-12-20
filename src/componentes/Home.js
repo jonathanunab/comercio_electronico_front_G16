@@ -27,13 +27,14 @@ const Home = () => {
 
   return (
     <main className="flex-1">
-      <div className="md:w-2/3 lg:w-2/5 p-10">
-        <h1 className="inline bg-gradient-to-r from-sky-200 via-violet-700 to-blue-800 bg-clip-text font-display text-5xl tracking-tight text-transparent">
-          Comercio electrónico comestibles Grupo 16
+      <div className="bg-sky-800 p-10">
+        <h1 className="bg-sky-800 text-white bg-clip-text font-display text-5xl tracking-tight text-transparent">
+          Comercio electrónico  de comestibles (Grupo 16 - G13)
         </h1>
         <Link
           to={"/login"}
-          className="block text-center my-5 text-violet-600 uppercase text-sm"
+          className=" block text-center my-5 bg-blue-200 uppercase text-sm"
+          style={{width: "170px"}}
         >
           Inicio de Sesión
         </Link>
@@ -43,11 +44,11 @@ const Home = () => {
         <div className="py-16 sm:py-24 xl:mx-auto xl:max-w-7xl xl:px-8">
           <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0">
             <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-              Comprar por categoría
+              Ver todas las categorías
             </h2>
             <a
               href="#"
-              className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block"
+              className="hidden text-sm font-semibold text-black hover:text-sky-500 sm:block"
             >
               Buscar todas las categorías
               <span aria-hidden="true"> &rarr;</span>
@@ -90,7 +91,7 @@ const Home = () => {
               href="#"
               className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500"
             >
-              Buscar todas las categorías
+              Ver los productos
               <span aria-hidden="true"> &rarr;</span>
             </a>
           </div>
@@ -100,7 +101,7 @@ const Home = () => {
       <div className="bg-gray-500">
         <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
           <h2 className="text-xl font-bold text-gray-900">
-            Consumidores también compraron
+            Lista de productos
           </h2>
 
           <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
