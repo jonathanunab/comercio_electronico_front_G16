@@ -47,7 +47,7 @@ const ActualizarProducto = () => {
     //console.log(data, idProducto);
     const response = await crud.PUT(`/api/producto/${idProducto}`, data);
     //console.log(response);
-    const mensaje1 = "la producto se actualizo correctamente";
+    const mensaje1 = "EL producto se actualizó correctamente";
     swal({
       title: "Información",
       text: mensaje1,
@@ -77,7 +77,7 @@ const ActualizarProducto = () => {
         <Sidebar />
         <main className="flex-1">
           <div className="mt-10 flex justify-center">
-            <h1 className="inline bg-gradient-to-r from-indigo-200 via-violet-700 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+            <h1 className="bg-sky-800 text-white bg-clip-text font-display text-5xl tracking-tight text-transparent">
               Actualizar Producto
             </h1>
           </div>
@@ -89,7 +89,7 @@ const ActualizarProducto = () => {
             >
               <div className="my-5">
                 <label className="uppercase text-gray-600 block text-xl font-bold">
-                  Nombre de la producto
+                  Nombre del producto
                 </label>
                 <input
                   type="text"
@@ -141,7 +141,7 @@ const ActualizarProducto = () => {
                 />
 
                 <label className="uppercase text-gray-600 block text-xl font-bold">
-                  Imagen de la producto
+                  Imagen del producto
                 </label>
                 <input
                   type="text"
@@ -157,7 +157,7 @@ const ActualizarProducto = () => {
               <input
                 type="submit"
                 value="Actualizar Producto"
-                className="bg-violet-600 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-violet-400 transition-colors"
+                className="bg-blue-200 mb-5 w-full py-3 text-black uppercase font-bold rounded hover:cursor-pointer hover:bg-violet-400 transition-colors"
               />
             </form>
           </div>

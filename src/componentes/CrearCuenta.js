@@ -28,7 +28,7 @@ const CrearCuenta = () => {
     //los dos password deben ser iguales
     if(password !== confirmar){
       //console.log("son diferentes");
-      const mensaje = "Las contraseñas son diferentes.";
+      const mensaje = "La contraseña no coincide.";
       swal({
         title: 'Error',
         text: mensaje,
@@ -53,7 +53,7 @@ const CrearCuenta = () => {
       const response = await crud.POST(`/api/usuarios`, data);
       const mensaje = response.msg;
       if(mensaje === ' el usuario ya existe'){
-        const mensaje = "el usuario ya existe";
+        const mensaje = "El usuario ya existe";
         swal({
           title: 'Error',
           text: mensaje,
@@ -110,8 +110,8 @@ const CrearCuenta = () => {
     
       <main className='container mx-auto mt-5 md:mt-20 p-5 md:flex md:justify-center'>
       <div className='md:w-2/3 lg:w-2/5'>
-         <h1 className="inline bg-gradient-to-r from-indigo-200 via-violet-700 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
-           G13 Iniciar sesión Ecommerce 3
+         <h1 className=" bg-sky-800 text-white bg-clip-text font-display text-5xl tracking-tight text-transparent">
+           Crear Cuenta - Ecommerce
          </h1>
 
           <form 
@@ -167,11 +167,11 @@ const CrearCuenta = () => {
            <input 
              type="submit"
              value="Crear Cuenta"
-             className="bg-violet-600 mb-5 w-full py-3 text-white uppercase font-bold rounded hover:cursor-pointer hover:bg-violet-400 transition-colors"
+             className="bg-blue-200 mb-5 w-full py-3 text-black uppercase font-bold rounded hover:cursor-pointer hover:bg-violet-400 transition-colors"
          />
          <Link 
          to={"/"}
-         className="block text-center my-5 text-violet-600 uppercase text-sm"
+         className="block text-center my-5 text-gray-500 uppercase text-sm"
          >Regresar</Link>
 
          </form>
